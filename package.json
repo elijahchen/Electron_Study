@@ -4,7 +4,7 @@
   "description": "Understanding electron, creating a simple web/desktop application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "electron": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/elijahchen/Electron_Study/issues"
   },
-  "homepage": "https://github.com/elijahchen/Electron_Study#readme"
+  "homepage": "https://github.com/elijahchen/Electron_Study#readme",
+  "dependencies": {
+    "electron": "^1.7.5"
+  }
 }
