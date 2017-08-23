@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/elijahchen/Electron_Study#readme",
   "dependencies": {
-    "electron": "^1.7.5"
+    "electron": "^1.7.5",
+    "fluent-ffmpeg": "^2.1.2"
   }
 }
