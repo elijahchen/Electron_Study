@@ -13,12 +13,13 @@
 
   <script type="text/javascript">
     const electron = require('electron');
+    const { ipcRenderer } = electron; //Window into the world!
 
     document.querySelector('form').addEventListener('submit', (event) =>{
       event.preventDefault();
-      const file = document.querySelector('input').files[0];
+      const { path } = document.querySelector('input').files[0]; //Destructure the file
 
-
+      ipcRenderer.send('video:submit', path); //Custom name provided by me
     });
   </script>
 </body>
