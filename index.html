@@ -11,6 +11,8 @@
     <button type="submit" name="button">Get Info</button>
   </form>
 
+  <h1 id="result"></h1>
+
   <script type="text/javascript">
     const electron = require('electron');
     const { ipcRenderer } = electron; //Window into the world!
@@ -20,6 +22,10 @@
       const { path } = document.querySelector('input').files[0]; //Destructure the file
 
       ipcRenderer.send('video:submit', path); //Custom name provided by me
+    });
+
+    ipcRenderer.on('video:metadata', (event, duration) => {
+      document.querySelector('#result').innerHTML = `Video is ${duration} seconds.`;
     });
   </script>
 </body>
